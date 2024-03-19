@@ -7,12 +7,18 @@ string[] pettingZoo =
     "ostriches", "pigs", "ponies", "rabbits", "sheep", "tortoises",
 };
 
-RandomizeAnimals();
+PlanSchoolVisit("School A");
+PlanSchoolVisit("School B", 3);
+PlanSchoolVisit("School C", 2);
 
-var group = AssignGroup();
-Console.WriteLine("School A");
-PrintGroup(group);
 
+void PlanSchoolVisit(string schoolName, int groups = 6)
+{
+    RandomizeAnimals();
+    string[,] group = AssignGroup(groups);
+    Console.WriteLine(schoolName);
+    PrintGroup(group);
+}
 
 // Randomizes the pettingZoo array by randomly switching each entries two by two
 void RandomizeAnimals()
