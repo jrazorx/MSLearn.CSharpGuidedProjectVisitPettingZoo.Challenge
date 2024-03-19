@@ -6,3 +6,9 @@ string[] pettingZoo =
     "goats", "iguanas", "kangaroos", "lemurs", "llamas", "macaws",
     "ostriches", "pigs", "ponies", "rabbits", "sheep", "tortoises",
 };
+
+// RandomizeAnimals();
+
+// var group = AssignGroup();
+Console.WriteLine("School A");
+// PrintGroup(group);
