@@ -11,7 +11,7 @@ RandomizeAnimals();
 
 var group = AssignGroup();
 Console.WriteLine("School A");
-// PrintGroup(group);
+PrintGroup(group);
 
 
 // Randomizes the pettingZoo array by randomly switching each entries two by two
@@ -29,6 +29,8 @@ void RandomizeAnimals()
     }
 }
 
+// Assign the animals to each group of students.
+// The number of animals assigned for 1 group is equal to the total number of animals divided by the number of groups of students
 string[,] AssignGroup(int groups = 6)
 {
     string[,] result = new string[groups, pettingZoo.Length / groups];
@@ -44,4 +46,18 @@ string[,] AssignGroup(int groups = 6)
     }
 
     return result;
+}
+
+// Print the animals assigned for each group of students
+void PrintGroup(string[,] group)
+{
+    for (int i = 0; i < group.GetLength(0); i++)
+    {
+        Console.Write($"Group {i + 1}: ");
+        for (int j = 0; j < group.GetLength(1); j++)
+        {
+            Console.Write($"{group[i, j]}  ");
+        }
+        Console.WriteLine();
+    }
 }
